@@ -1,10 +1,14 @@
 // src/LandingPage.tsx
 import React from 'react';
 import Spline from '@splinetool/react-spline';
-import CustomButton from '../components/CustomButton';
+
 import backgroundSVG from '../assets/back.svg';
 import iosLogo from '../assets/logoioslab.svg';
 import { motion } from 'framer-motion';
+import { Button } from "../components/ui/button"
+
+
+
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -64,7 +68,7 @@ const LandingPage: React.FC = () => {
 
                 {/* Botón personalizado */}
                 <motion.div variants={fadeInUp}>
-                    <CustomButton href="#" text="Registrarse" />
+                    <Button variant="outline">Registrate ahora</Button>
                 </motion.div>
             </motion.div>
         </div>
