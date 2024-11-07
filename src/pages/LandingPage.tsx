@@ -5,10 +5,7 @@ import Spline from '@splinetool/react-spline';
 import backgroundSVG from '../assets/back.svg';
 import iosLogo from '../assets/logoioslab.svg';
 import { motion } from 'framer-motion';
-import { Button } from "../components/ui/button"
-
-
-
+import { Button } from "../components/ui/button";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -21,9 +18,12 @@ const staggerContainer = {
 };
 
 const LandingPage: React.FC = () => {
-    return (
-        <div className="relative min-h-screen  place-items-center text-center p-6 bg-black overflow-hidden">
+    const handleRegistrationClick = () => {
+        window.location.href = 'https://noco.ioslab.dev/dashboard/#/nc/form/5e94bfe9-0209-4088-a10a-f794998e4c58';
+    };
 
+    return (
+        <div className="relative min-h-screen place-items-center text-center p-6 bg-black overflow-hidden">
             {/* Fondo con SVG desenfocado */}
             <img
                 src={backgroundSVG}
@@ -31,9 +31,7 @@ const LandingPage: React.FC = () => {
                 className="absolute inset-0 w-full h-full blur-lg opacity-80 object-cover pointer-events-none z-0"
             />
 
-            {/* Contenido principal encima del fondo */}
-
-
+            {/* Contenido principal */}
             <motion.div
                 initial="hidden"
                 animate="visible"
@@ -48,7 +46,7 @@ const LandingPage: React.FC = () => {
                     variants={fadeInUp}
                 />
 
-                {/* Modelo 3D de Spline centrado y responsivo */}
+                {/* Modelo 3D de Spline */}
                 <motion.div
                     className="w-full md:h-[500px] mt-3 mb-3 overflow-hidden"
                     variants={fadeInUp}
@@ -66,9 +64,11 @@ const LandingPage: React.FC = () => {
                     <p className="text-sm">2:00 p.m • Jardín Central UPMX</p>
                 </motion.div>
 
-                {/* Botón personalizado */}
+                {/* Botón de redirección */}
                 <motion.div variants={fadeInUp}>
-                    <Button variant="outline">Registrate ahora</Button>
+                    <Button variant="outline" onClick={handleRegistrationClick}>
+                        Registrate ahora
+                    </Button>
                 </motion.div>
             </motion.div>
         </div>
