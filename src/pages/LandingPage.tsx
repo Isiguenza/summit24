@@ -61,7 +61,7 @@ const LandingPage: React.FC = () => {
                 {/* Fecha y ubicación */}
                 <motion.div className="text-white text-center mb-8" variants={fadeInUp}>
                     <p className="text-lg font-semibold">Noviembre 12, 2024</p>
-                    <p className="text-sm">2:00 p.m • Jardín Central UPMX</p>
+                    <p className="text-sm">2:00 p.m • Jardín Central, Mixcoac</p>
                 </motion.div>
 
                 {/* Botón de redirección */}
